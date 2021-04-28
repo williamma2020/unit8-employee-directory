@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    /* border:1px solid red; */
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    position: relative;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.4)
+}
+
+/* Modal container */
+
+.modal {
+    width: 375px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 30px 20px;
+}
+
+/* Modal close button */
+
+.modal {
+    width: 375px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 30px 20px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+}
+
+/* Hidden class */
+
+.hidden {
+    display: none;
+}
+
+/* ********************************************
+                   my configure codes
+********************************************* */
+h1{
+    text-align:center;
+}
+
+.grid-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+input{
+    display: flex;
+    width: 50%;
+    margin: 10px auto;
+}
+
+
+@media (min-width:768px){
+
+    .card{
+        width:45%;
+    }
+
+}
+
+@media (min-width:1024px){
+    
+    .card{
+        width:30%;
+    }
+}
+    
+
