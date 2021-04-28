@@ -1,5 +1,5 @@
 const search = document.querySelector('#search');
-const boxTexts = document.getElementsByClassName('.name');
+const boxTexts = document.querySelectorAll('.card .name');
 const handleSearch = event => {
     //define searchTerm as event
     const searchTerm = event.target.value.toLowerCase();
