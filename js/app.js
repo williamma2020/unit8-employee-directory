@@ -44,6 +44,34 @@ function displayEmployees(employeeData) {
     `
     });
     gridContainer.innerHTML = employeeHTML;
+
+/* ******************************************************************************** */
+                // searching filter
+/* ******************************************************************************** */
+
+
+    const search = document.querySelector('#search');
+    const boxTexts = document.querySelectorAll('.card .name');
+    const handleSearch = event => {
+    //define searchTerm as event
+    const searchTerm = event.target.value.toLowerCase();
+    boxTexts.forEach(boxText => {
+        const text = boxText.textContent.toLowerCase();
+        const box = boxText.parentElement.parentElement;
+
+
+        //if input letter included in the searchTerm, box show up.
+        if(text.includes(searchTerm)) {
+          box.style.display = "block";
+          //otherwise, box disappear
+        } else {
+          box.style.display = "none";  
+        }
+      });
+}
+search.addEventListener('keyup', handleSearch);
+
+
     }
 /* ******************************************************************************** */
     //    Create a displayModal function that has a single parameter named index
@@ -93,6 +121,8 @@ function displayEmployees(employeeData) {
     modalClose.addEventListener('click', () => {
         overlay.classList.add("hidden");
     });
+
+
 
 
 
